@@ -55,7 +55,7 @@ header {
 .hero {
     background: url('photos/logo6.jpeg') no-repeat center center; /* Lisää oma taustakuva */
     background-size: contain; /* Kuvan koko skaalautuu niin, että se näkyy kokonaan */
-    color: rgb(250, 220, 220);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 100px 100px; /* Lisää tilaa ylhäältä ja alhaalta */
     min-height: 400px; /* Varmistaa, että taustakuva näkyy riittävän korkeana */
