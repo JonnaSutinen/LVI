@@ -1,226 +1,169 @@
-/* Perusasetukset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; /* Varmistaa, että body täyttää koko selaimen korkeuden */
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    color: #333;
+    background-color: #f4f4f4; /* Vaalean harmaa taustaväri */
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Varmistaa, että sisältö täyttää koko näytön korkeuden */
-}
-
-main {
-    flex: 1; /* Joustava alue, joka täyttää jäljelle jäävän tilan */
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-/* Header-asettelu */
 header {
+    background-color: #003366; /* Tumma sininen tausta */
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hieno varjo antamaan syvyyttä */
+    padding: 20px;
 }
 
-/* Logon ja yrityksen nimen sijoittelu */
-header .logo {
+.logo img {
+    height: 50px; /* Logo korkeuden säätö */
+}
+
+.navbar {
     display: flex;
     align-items: center;
 }
 
-header .logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
+.mobile-menu {
+    display: none; /* Piilotetaan mobiilivalikko oletuksena */
 }
 
-header .logo h1 {
-    font-size: 24px;
-    color: #fff;
-    font-weight: 600;
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
-/* Navigointi oikeaan yläkulmaan */
-nav ul {
-    list-style-type: none;
+.nav-links li {
+    margin-left: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
+.nav-links a {
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease; /* Hieno väri-animaatio */
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #ff9900; /* Korostettu hover- ja aktiivinen linkki */
+.nav-links .active {
+    font-weight: bold;
+    text-decoration: underline; /* Aktiivisen linkin alleviivaus */
 }
 
-/* Hero section (video taustalla) */
-/* Hero section (video taustalla) */
 .hero {
-    position: relative;
-    width: 100vw; /* Täyttää koko näytön leveyden */
-    height: 80vh; /* Muutettu korkeudeksi 80vh */
-    left: 50%;
-    margin-left: -50vw; /* Poistaa marginaalit vasemmalta */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url('photos/logo6.jpeg') no-repeat center center; /* Lisää oma taustakuva */
+    background-size: contain; /* Kuvan koko skaalautuu niin, että se näkyy kokonaan */
+    color: rgb(250, 220, 220);
     text-align: center;
-    overflow: hidden; /* Varmistaa, että video pysyy boksin sisällä */
+    padding: 100px 100px; /* Lisää tilaa ylhäältä ja alhaalta */
+    min-height: 400px; /* Varmistaa, että taustakuva näkyy riittävän korkeana */
+    overflow: hidden; /* Estää kuvien ylivuotoa */
+    margin-top: 20px; /* Lisää etäisyyttä hero-osan yläpuolelle */
 }
 
-.hero video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 1;
-    object-fit: cover; /* Varmistaa, että video täyttää hero-alueen */
+/* Mobiililaitteiden tyylit */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 10px; /* Vähennä tilaa mobiililaitteilla */
+        min-height: 300px; /* Vähennä minimikorkeutta mobiililaitteilla */
+        margin-top: 15px; /* Vähennä marginaalia mobiililaitteilla */
+        background-size: contain; /* Varmistaa, että kuva näkyy kokonaan myös mobiililaitteilla */
+    }
 }
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 5px; /* Vähentää tilaa vielä enemmän pienillä näytöillä */
+        min-height: 250px; /* Vähennä minimikorkeutta vielä enemmän */
+        margin-top: 10px; /* Vähennä marginaalia pienillä näytöillä */
+    }
+}
+
+
 
 .hero-text {
-    position: relative;
-    z-index: 2; /* Teksti videoiden päälle */
-    background-color: rgba(0, 0, 0, 0.6); /* Tumma läpinäkyvä tausta */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 60px; /* Lisää tilaa painikkeen ylle */
+    background-color: rgba(17, 17, 17, 0.795); /* Harmaa tausta, 70% läpinäkyvyys */
+    padding: 20px; /* Lisää vähän tilaa tekstin ympärille */
+    border-radius: 5px; /* Pehmennetään kulmia */
 }
 
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.hero p.highlight {
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-/* Call-to-action button */
 .cta-button {
-    display: inline-block;
-    padding: 15px 25px;
-    background-color: #ff9900;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+    background-color: #000000; /* Tumma vaaleansininen */
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 40px; /* Lisää tilaa painikkeen ylle */
+    display: inline-block; /* Varmistaa, että marginaali toimii oikein */
 }
 
-.cta-button:hover {
-    background-color: #cc7a00;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    box-shadow: 0 -2px 4px rgba(158, 63, 63, 0.1); /* Hieno varjo footerille */
-}
-
-/* Typografia ja otsikot */
-h1, h2 {
-    color: #ffffff;
-}
-
-h2 {
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-p {
-    font-size: 18px;
-    color: #ffffff;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Kuva- ja galleriatyylit (esimerkkinä kuvagalleria-sivulle) */
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.gallery img {
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05); /* Hieno zoom-efekti kuviin */
-}
-
-.pricing {
-    background-color: #fff; /* Taustaväri */
+.container {
+    margin: 40px auto;
+    max-width: 800px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Keskittää alueen */
-    max-width: 800px; /* Maksimileveys */
+    background-color: white; /* Valkoinen tausta */
+    border: 1px solid #ccc; /* Harmaa reunus */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Varjo efekti */
 }
 
-.pricing h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.service-info ul {
+    list-style-type: none;
+    padding-left: 0; /* Poistetaan oletussisennys */
+}
+
+.service-info li {
+    margin: 10px 0; /* Välit listan kohtien välillä */
+    color: #003366; /* Tumma sininen väri nuolille ja teksteille */
 }
 
 .pricing table {
-    width: 100%; /* Taulukko täyttää koko leveyden */
-    border-collapse: collapse; /* Poistaa kaksoisreunat */
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .pricing th, .pricing td {
-    border: 1px solid #ddd; /* Reunaviiva */
-    padding: 10px; /* Sisätilat */
-    text-align: center; /* Keskittää tekstin */
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Vaalean harmaa reunus */
 }
 
-.pricing th {
-    background-color: #f4f4f4; /* Erityinen taustaväri otsikoille */
+footer {
+    background-color: #003366; /* Tumma sininen tausta */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Mobiilinäytön tyylit */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block; /* Näytetään mobiilivalikko */
+        
+    }
+    .nav-links {
+        display: none; /* Piilotetaan linkit oletuksena */
+        flex-direction: column;
+        position: absolute;
+        background-color: #003366; /* Tumma sininen tausta */
+        top: 60px; /* Siirretään valikko alemmaksi */
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Näytetään linkit, kun mobiilivalikko on auki */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Välit listan kohtien välillä */
+    }
 }

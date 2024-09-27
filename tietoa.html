@@ -9,12 +9,14 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="LVI Kuivalainen logo">
+            <img src="photos/logo5.jpeg" alt="LVI Kuivalainen logo">
             <h1>LVI Kuivalainen</h1>
         </div>
-        <h1>LVI Kuivalainen</h1>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="mobile-menu">
+                <span class="menu-icon">&#9776;</span>
+            </div>
+            <ul class="nav-links">
                 <li><a href="index.html">Koti</a></li>
                 <li><a href="tietoa.html" class="active">Tietoa meistä</a></li>
                 <li><a href="palvelut.html">Palvelut</a></li>
@@ -27,13 +29,26 @@
 
     <main>
         <section>
-            <h2>Tietoa meistä</h2>
-            <p>LVI Kuivalainen on toiminut alalla yli 20 vuotta. Tarjoamme kattavat LVI-ratkaisut asiakkaillemme.</p>
+            <h2>Palvelut</h2>
+            <p>coming soon</p>
         </section>
     </main>
+
 
     <footer>
         <p>&copy; 2024 LVI Kuivalainen. Kaikki oikeudet pidätetään.</p>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+    
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+    
 </body>
 </html>

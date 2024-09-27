@@ -7,73 +7,122 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="LVI Kuivalainen logo">
-            <h1>LVI Kuivalainen</h1>
+
+<header>
+    <div class="logo">
+        <img src="photos/logo5.jpeg" alt="LVI Kuivalainen logo">
+        <h1>LVI Kuivalainen</h1>
+    </div>
+    <nav class="navbar">
+        <div class="mobile-menu">
+            <span class="menu-icon">&#9776;</span>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Koti</a></li>
-                <li><a href="tietoa.html">Tietoa meistä</a></li>
-                <li><a href="palvelut.html">Palvelut</a></li>
-                <li><a href="tyomme.html">Työmme</a></li>
-                <li><a href="kuvagalleria.html">Kuvagalleria</a></li>
-                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Koti</a></li>
+            <li><a href="tietoa.html">Tietoa meistä</a></li>
+            <li><a href="palvelut.html">Palvelut</a></li>
+            <li><a href="tyomme.html">Työmme</a></li>
+            <li><a href="kuvagalleria.html">Kuvagalleria</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <section class="hero">
-            <!-- Lisätään video taustaksi -->
-            <video autoplay muted loop id="heroVideo">
-                <source src="ves.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-text">
-                <h2>LVI-työt Joensuussa sekä lähialueilla</h2>
-                <p>Putkityöt ammattitaidolla Joensuussa sekä lähialueilla</p>
-                <p class="highlight">Paikallinen yrittäjä Joensuussa</p>
-                <a href="yhteystiedot.html" class="cta-button">Ota meihin yhteyttä</a>
-            </div>
-        </section>
+<main>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>LVI-työt Joensuussa sekä lähialueilla</h2>
+            <p>Putkityöt ammattitaidolla Joensuussa sekä lähialueilla</p>
+            <p class="highlight">Paikallinen yrittäjä Joensuussa</p>
+            <a href="yhteystiedot.html" class="cta-button">Ota meihin yhteyttä</a>
+        </div>
+    </section>    
 
-        <div class="pricing">
-            <h2>Tuntityöhinnasto</h2>
-            <table>
+    <div class="container pricing">
+        <h2>Tuntityöhinnasto</h2>
+        <table>
+            <thead>
                 <tr>
-                    <th>LVI-asennusten huoltotyöt</th>
+                    <th>LVI-asennus ja huoltotyöt</th>
                     <th>ALV 0%</th>
                     <th>ALV 25,5%</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>Tuntiveloitus</td>
                     <td>40e/h</td>
                     <td>50,20e/h</td>
                 </tr>
                 <tr>
-                    <th colspan="3">Kilometrikorvaus kaupunki max 15km</th>
+                    <td>Kilometrikorvaus (kaupunki max 50km)</td>
+                    <td>15e/kpl</td>
+                    <td>18,83e/kpl</td>
                 </tr>
                 <tr>
-                    <td>Kilometrikorvaus</td>
-                    <td>15e/km</td>
-                    <td>18,85e/km</td>
+                    <td>Kilometrikorvaus (yli 50km)</td>
+                    <td>0,84e/km</td>
+                    <td>1,05e/km</td>
                 </tr>
-                <tr>
-                    <th colspan="3">Kilometrikorvaus max 50km</th>
-                </tr>
-                <tr>
-                    <td>Kilometrikorvaus</td>
-                    <td>35e/km</td>
-                    <td>43,95e/km</td>
-                </tr>
-            </table>
+            </tbody>
+        </table>
+        <div class="pricing-info">
+            <p><strong>Minimi tuntiveloitus:</strong> 1 tunti, jonka jälkeen veloitus puolentunnin jaksoissa.</p>
+            <p>Veloitukseen kuuluu tavaran keräys työmaata varten, ajomatkat, asennukset sekä työmaan muut valmistelut.</p>
         </div>
-    </main>
+    </div>
+    
+    <div class="container service-info">
+        <h2>Olemme yritys, joka tarjoaa asiakkailleen laadukasta ja ammattimaista palvelua.</h2>
+        <ul>
+            <li>&#9654; Huolto- ja korjauspalvelut</li>
+            <li>&#9654; Uudisrakennukset</li>
+            <li>&#9654; Saneerauskohteet</li>
+            <li>&#9654; Putkiasennus</li>
+            <li>&#9654; Ilmanvaihto</li>
+            <li>&#9654; IV mittaus ja säätö</li>
+            <li>&#9654; LV varaajien vaihdot</li>
+            <li>&#9654; Kylpyhuone putkitukset</li>
+            <li>&#9654; Hanojen vaihto, sekä korjaus</li>
+        </ul>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 LVI Kuivalainen. Kaikki oikeudet pidätetään.</p>
-    </footer>
+    <div class="container system-info">
+        <h2>Meiltä rakennuksesi</h2>
+        <h3>Lämmitys-, ilmanvaihto sekä vesijärjestelmien asennukset sekä huollot kotisi järjestelmien hyvään ylläpitoon.</h3> <Br>
+        
+        <div class="boxes">
+            <div class="box">
+                <h4>Vikatila järjestelmässä</h4>
+                <p>Käyttövesi ei tule hanasta niinkuin pitäisi? <br>
+                     Lämmityslaitteisto ei toimi? <br>
+                      Ilmanvaihto ei toimi? <br>
+                      Ota yhteyttä! Laitetaan asia kuntoon.</p><Br>
+            </div>
+            
+            <div class="box">
+                <h4>LVI-Huoltotarve</h4>
+                <p>Tarvitseeko hanasi huoltoa? (Keittiö sekä allashanat) <br>
+                    Tarvitseeko ilmanvaihtokoneeseen uudet suodattimet sekä lämmöntalteenoton kennon pesun?<br>
+                    Tarvitseeko lämmityslaitteiston huoltoa? <br>
+                    Ota yhteyttä! Huolletaan laitteistot kuntoon.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 LVI Kuivalainen. Kaikki oikeudet pidätetään.</p>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
